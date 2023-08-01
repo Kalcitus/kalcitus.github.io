@@ -1,0 +1,45 @@
+body {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    width: 1080px;
+    margin: auto;
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    padding: 0;
+    margin: 5px 0 0 0;
+}
+
+.header {
+    background-color: #303030;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+}
+
+.displayedContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.displayedContent img {
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.displayedContent::after {
+  content: "";
+  width: 250px;
+}
