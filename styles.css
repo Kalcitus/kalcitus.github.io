@@ -43,3 +43,7 @@ h1 {
   content: "";
   width: 250px;
 }
+
+.copyrightText {
+    font-style: italic;
+}
