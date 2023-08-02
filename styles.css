@@ -32,7 +32,7 @@ h1 {
     padding: 20px 10px;
 }
 
-.displayedContent img {
+.displayedContent a, img {
   width: 100%;
   max-width: 250px;
   height: 250px;
