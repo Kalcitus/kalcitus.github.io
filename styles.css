@@ -13,11 +13,25 @@ h1 {
     margin: 5px 0 0 0;
 }
 
+.lnraButton {
+    width: 14%;
+    height: 50%;
+    margin-left: 7%;
+}
+
+.photoButton {
+    width: 14%;
+    height: 50%;
+    margin-left: 3%;
+}
+
 .header {
     background-color: #303030;
     color: #fff;
     width: 100%;
     padding: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .displayedContent {
