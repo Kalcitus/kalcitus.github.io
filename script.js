@@ -309,7 +309,13 @@ console.log("end of image loading code");
 
 /* Line and Rendered Art Button -- remove current images and replace using function */
 lnraButton.onclick = () => {
+	let oldButton = document.querySelectorAll("button");
+	console.log(oldButton);
+	oldButton.forEach(button => {
+	button.classList.remove("active");
+	})
 	state = handDrawnContent;
+	lnraButton.classList.add("active");
 	const remImg = document.getElementById("contentDiv");
 	while (remImg.lastElementChild) {
 		remImg.removeChild(remImg.lastElementChild);
@@ -325,7 +331,13 @@ lnraButton.onclick = () => {
 
 /* Photography Button -- remove current images and replace using function */
 photoButton.onclick = () => {
+	let oldButton = document.querySelectorAll("button");
+	console.log(oldButton);
+	oldButton.forEach(button => {
+		button.classList.remove("active");
+	})
 	state = photography;
+	photoButton.classList.add("active");
 	const remImg = document.getElementById("contentDiv");
 	while (remImg.lastElementChild) {
 		remImg.removeChild(remImg.lastElementChild);

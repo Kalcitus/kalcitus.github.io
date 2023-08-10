@@ -13,16 +13,34 @@ h1 {
     margin: 5px 0 0 0;
 }
 
+button {
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    button.active {
+        /*text-shadow: 1px 1px 0 rgb(0,0,0), 1px 1px 0 rgb(0,0,0), 1px 1px 0 rgb(0,0,0), 1px 1px 0 rgb(0,0,0);*/
+        color: rgb(215,215,215);
+    }
+
+
 .lnraButton {
-    width: 14%;
+    width: 17%;
     height: 50%;
     margin-left: 7%;
+    margin-right: 0;
 }
+
 
 .photoButton {
     width: 14%;
     height: 50%;
-    margin-left: 3%;
+    margin-left: 0;
 }
 
 .header {
@@ -86,7 +104,8 @@ h1 {
 
 #lightbox p {
     background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(0,0,0);
+    border: 4px solid rgb(0,0,0);
+    border-style: groove;
     color: rgb(0,0,0);
     width: auto;
     text-align: center;
