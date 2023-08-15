@@ -73,6 +73,12 @@ const handDrawnContent = {
 		name: "handmade/The_Old_Wall(book_cover_sm).png",
 		altText: "Painting of skeletons climbing over a wall as their flesh reforms.",
 		description: "Mixed media on cold pressed Bristol."
+		},
+	12:
+		{
+		name: "handmade/Cephalopod_Design.png",
+		altText: "Design drawings of a submersible spaceship.",
+		description: "Technical pen and marker on cold pressed Bristol."
 		}
 };
 
