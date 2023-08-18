@@ -2,22 +2,13 @@
 /*dynamic content setup*/
 
 
+/* Prepping link for purchasing Philanthropy, gets added during lightbox operation*/
 let makeLink = document.createElement('a');
 makeLink.setAttribute('href', 'https://www.amazon.com/Philanthropy-R-P-McGuirk-ebook/dp/B07JJQYVZ6');
 makeLink.innerHTML = "Purchase book here.";
 console.log(makeLink);
-//let linkText = "here.";
-//makeLink.appendChild(linkText);
 makeLink.id = "philanthropyLink";
-//makeLink.href = "https://www.amazon.com/Philanthropy-R-P-McGuirk-ebook/dp/B07JJQYVZ6";
 
-
-
-//var a = document.createElement('a');
-//var linkText = document.createTextNode("my title text");
-//a.appendChild(linkText);
-//a.title = "my title text";
-//a.href = "http://example.com"
 
 
 const handDrawnContent = {
