@@ -1,6 +1,25 @@
 /* work in progress */
 /*dynamic content setup*/
 
+
+let makeLink = document.createElement('a');
+makeLink.setAttribute('href', 'https://www.amazon.com/Philanthropy-R-P-McGuirk-ebook/dp/B07JJQYVZ6');
+makeLink.innerHTML = "Purchase book here.";
+console.log(makeLink);
+//let linkText = "here.";
+//makeLink.appendChild(linkText);
+makeLink.id = "philanthropyLink";
+//makeLink.href = "https://www.amazon.com/Philanthropy-R-P-McGuirk-ebook/dp/B07JJQYVZ6";
+
+
+
+//var a = document.createElement('a');
+//var linkText = document.createTextNode("my title text");
+//a.appendChild(linkText);
+//a.title = "my title text";
+//a.href = "http://example.com"
+
+
 const handDrawnContent = {
 	0:
 		{
@@ -60,7 +79,7 @@ const handDrawnContent = {
 		{
 		name: "handmade/Philanthropy(book_cover).png",
 		altText: "A mass of ghostly figures stand in a mass, staring at the viewer.",
-		description: "Ink and brush work on cold pressed Bristol."
+		description: "Ink and brush work on cold pressed Bristol. "
 		},
 	10:
 		{
@@ -72,7 +91,7 @@ const handDrawnContent = {
 		{
 		name: "handmade/The_Old_Wall(book_cover_sm).png",
 		altText: "Painting of skeletons climbing over a wall as their flesh reforms.",
-		description: "Mixed media on cold pressed Bristol."
+		description: "Mixed media on cold pressed Bristol. (unpublished work)"
 		},
 	12:
 		{
@@ -290,13 +309,13 @@ const photography = {
 	}
 };
 
-/* Set initial/default state to Line and Rendered Art */
+/* Set initial/default state to "Line and Rendered Art" */
 let state = handDrawnContent;
 
 console.log("object loaded");
 console.log(state[0].altText);
 
-/* for loop and function to create/add images */
+/* loop and function to create/add images */
 function loadImage(artWork, i) {
 	console.log("function run " + i);
 	let img = document.createElement("img");
@@ -385,6 +404,9 @@ function initLightbox() {
 				}
 				lightbox.appendChild(img);
 				lightbox.appendChild(p);
+				if (imgNum === 9) {
+					p.appendChild(makeLink)
+				}
 				console.log(p.textContent);
 			} else {
 				while (lightbox.firstChild) {
