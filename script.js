@@ -6,8 +6,8 @@
 let makeLink = document.createElement('a');
 makeLink.setAttribute('href', 'https://www.amazon.com/Philanthropy-R-P-McGuirk-ebook/dp/B07JJQYVZ6');
 makeLink.innerHTML = "Purchase book here.";
-console.log(makeLink);
 makeLink.id = "philanthropyLink";
+console.log(makeLink);
 
 
 
@@ -300,15 +300,27 @@ const photography = {
 	}
 };
 
+const music = {
+	0: {
+		src: "https://youtube.com/embed/sS9qVv79M3I?controls=1"
+	},
+	1: {
+		src: "https://youtube.com/embed/jUe308AB5Mc?controls=1"
+	},
+	2: {
+		src: "https://youtube.com/embed/IR5XWkrgQ7c?controls=1"
+	}
+}
+
 /* Set initial/default state to "Line and Rendered Art" */
 let state = handDrawnContent;
 
 console.log("object loaded");
 console.log(state[0].altText);
 
-/* loop and function to create/add images */
+/* CREATE & ADD IMAGES */
 function loadImage(artWork, i) {
-	console.log("function run " + i);
+	console.log("Image function run " + i);
 	let img = document.createElement("img");
 	img.id = "newImage " + i;
 	img.src = artWork; /* artwork URL */
@@ -321,9 +333,23 @@ for (let i = 0; i < Object.keys(state).length; i++) {
 	loadImage(state[i].name, i);
 }
 
+/* CREATE & ADD IFRAME LINKS */
+function loadVideo(vidInput, i) {
+	console.log("Video function run " + i);
+	let video = document.createElement("iframe");
+	video.id = "newVideo " + i;
+	video.src = vidInput; /* video URL */
+	console.log(video.id);
+	document.getElementById("contentDiv").appendChild(video);
+}
+for (let i = 0; i < Object.keys(state).length; i++) {
+	console.log("for loop " + i);
+	loadImage(state[i].name, i);
+}
+
 console.log("end of image loading code");
 
-/* Line and Rendered Art Button -- remove current images and replace using function */
+/* LINE & RENDERED ART BUTTON -- remove current images and replace using function */
 lnraButton.onclick = () => {
 	let oldButton = document.querySelectorAll("button");
 	console.log(oldButton);
@@ -337,7 +363,7 @@ lnraButton.onclick = () => {
 		remImg.removeChild(remImg.lastElementChild);
 	}
 	for (let i = 0; i < Object.keys(state).length; i++) {
-		console.log("for loop " + i);
+		console.log("Artwork for loop " + i);
 		loadImage(state[i].name, i);
 	}
 	const element = document.getElementById("lightbox");
@@ -345,7 +371,7 @@ lnraButton.onclick = () => {
 	initLightbox();
 }
 
-/* Photography Button -- remove current images and replace using function */
+/* PHOTOGRAPHY BUTTON -- remove current images and replace using function */
 photoButton.onclick = () => {
 	let oldButton = document.querySelectorAll("button");
 	console.log(oldButton);
@@ -359,8 +385,30 @@ photoButton.onclick = () => {
 		remImg.removeChild(remImg.lastElementChild);
 	}
 	for (let i = 0; i < Object.keys(state).length; i++) {
-		console.log("for loop " + i);
+		console.log("Photography for loop " + i);
 		loadImage(state[i].name, i);
+	}
+	const element = document.getElementById("lightbox");
+	element.parentNode.removeChild(element);
+	initLightbox();
+}
+
+/* MUSIC BUTTON -- remove current images and replace with iframes */
+musicButton.onclick = () => {
+	let oldButton = document.querySelectorAll("button");
+	console.log(oldButton);
+	oldButton.forEach(button => {
+		button.classList.remove("active");
+	})
+	state = music;
+	musicButton.classList.add("active");
+	const remImg = document.getElementById("contentDiv");
+	while (remImg.lastElementChild) {
+		remImg.removeChild(remImg.lastElementChild);
+	}
+	for (let i = 0; i < Object.keys(state).length; i++) {
+		console.log("Video for loop " + i);
+		loadVideo(state[i].src, i);
 	}
 	const element = document.getElementById("lightbox");
 	element.parentNode.removeChild(element);

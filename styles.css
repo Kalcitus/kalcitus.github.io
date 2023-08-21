@@ -77,6 +77,11 @@ button {
   width: 250px;
 }
 
+iframe {
+    width: 420px;
+    height: 315px;
+}
+
 #lightbox {
     position: fixed;
     z-index: 1000;
