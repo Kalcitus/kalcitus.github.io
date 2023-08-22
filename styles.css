@@ -32,7 +32,7 @@ button {
 .lnraButton {
     width: 17%;
     height: 50%;
-    margin-left: 7%;
+    margin-left: 10%;
     margin-right: 0;
 }
 
@@ -81,6 +81,7 @@ iframe {
     width: 420px;
     height: 315px;
     border: 0;
+    padding: 15px;
 }
 
 #lightbox {

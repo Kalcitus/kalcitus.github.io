@@ -10,7 +10,7 @@ makeLink.id = "philanthropyLink";
 console.log(makeLink);
 
 
-
+/* Creating the arrays for each section of content */
 const handDrawnContent = {
 	0:
 		{
@@ -302,13 +302,16 @@ const photography = {
 
 const music = {
 	0: {
-		src: "https://youtube.com/embed/sS9qVv79M3I?controls=1"
+		src: "https://youtube.com/embed/FnKvrVgWABg?controls=1"
 	},
 	1: {
-		src: "https://youtube.com/embed/jUe308AB5Mc?controls=1"
+		src: "https://youtube.com/embed/IR5XWkrgQ7c?controls=1"
 	},
 	2: {
-		src: "https://youtube.com/embed/IR5XWkrgQ7c?controls=1"
+		src: "https://youtube.com/embed/jUe308AB5Mc?controls=1"
+	},
+	3: {
+		src: "https://youtube.com/embed/sS9qVv79M3I?controls=1"
 	}
 }
 
