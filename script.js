@@ -345,10 +345,6 @@ function loadVideo(vidInput, i) {
 	console.log(video.id);
 	document.getElementById("contentDiv").appendChild(video);
 }
-for (let i = 0; i < Object.keys(state).length; i++) {
-	console.log("for loop " + i);
-	loadImage(state[i].name, i);
-}
 
 console.log("end of image loading code");
 
