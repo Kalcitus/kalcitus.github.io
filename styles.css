@@ -64,6 +64,18 @@ button {
     padding: 20px 10px;
 }
 
+.exampleWork {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    max-width: 1080px;
+    margin: 20px auto;
+    padding: 20px 10px;
+}
+
 .displayedContent img {
   width: 100%;
   max-width: 250px;
